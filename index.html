@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Benford's Law Table with Column Chart</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1 class="heading">Benford's Law</h1>
+    <table id="tableData">
+        <thead>
+            <tr>
+                <th>Digit</th>
+                <th>Data Frequency</th>
+                <th>Data Frequency Percent</th>
+                <th>Benford Frequency</th>
+                <th>Benford Frequency Percent</th>
+                <th>Difference Frequency</th>
+                <th>Difference Frequency Percent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- table data goes here -->
+        </tbody>
+    </table>
+    <div id="charts">
+        <div id="barChart_div"></div>
+        <div id="lineChart_div"></div>
+    </div>
+
+    <script src="js/benfordtestdata.js"></script>
+    <script src="js/benfordslaw.js"></script>
+    <script src="js/drawCharts.js"></script>
+    <script src="js/benfordslawpage.js"></script>
+    <script src="js/fillTheTable.js"></script>
+</body>
+
+</html>
