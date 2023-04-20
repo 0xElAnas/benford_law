@@ -8,26 +8,53 @@
 </head>
 
 <body>
-    <h1 class="heading">Benford's Law</h1>
-    <table id="tableData">
-        <thead>
-            <tr>
-                <th>Digit</th>
-                <th>Data Frequency</th>
-                <th>Data Frequency Percent</th>
-                <th>Benford Frequency</th>
-                <th>Benford Frequency Percent</th>
-                <th>Difference Frequency</th>
-                <th>Difference Frequency Percent</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- table data goes here -->
-        </tbody>
-    </table>
-    <div id="charts">
-        <div id="barChart_div"></div>
-        <div id="lineChart_div"></div>
+    <div class="container">
+        <h1 class="heading">Benford's Law</h1>
+
+        <section id="intro">
+            <!-- HTML form section for uploading JSON file -->
+            <form id="uploadForm" enctype="multipart/form-data">
+                <h2 for="jsonFile">Upload JSON File:</h2>
+                <div class="file-input-container">
+                    <input type="file" id="jsonFile" name="jsonFile" accept=".json">
+                    <label for="jsonFile" class="file-input-label">Choose File</label>
+                </div>
+                <input type="submit" value="Analyze">
+                <span id="fileName" style="margin-left: 10px;"></span>
+            </form>
+
+            <div id="description">
+                <h2>Description</h2>
+                <p>This project is a web-based application that performs Benford's Law analysis on data and visualizes
+                    the
+                    results using the Google Charts library.</p>
+                <p><a href="https://en.wikipedia.org/wiki/Benford%27s_law" target="_blank">Benford's Law</a> is a
+                    statistical phenomenon that states that in many real-world datasets, the leading
+                    digits (1 to 9) occur with a specific distribution, and this distribution can be used to detect
+                    anomalies or fraud in data.</p>
+            </div>
+        </section>
+
+        <table id="tableData">
+            <thead>
+                <tr>
+                    <th>Digit</th>
+                    <th>Data Frequency</th>
+                    <th>Data Frequency Percent</th>
+                    <th>Benford Frequency</th>
+                    <th>Benford Frequency Percent</th>
+                    <th>Difference Frequency</th>
+                    <th>Difference Frequency Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- table data goes here -->
+            </tbody>
+        </table>
+        <div id="charts">
+            <div id="barChart_div"></div>
+            <div id="lineChart_div"></div>
+        </div>
     </div>
 
     <script src="js/benfordtestdata.js"></script>
@@ -35,6 +62,35 @@
     <script src="js/drawCharts.js"></script>
     <script src="js/benfordslawpage.js"></script>
     <script src="js/fillTheTable.js"></script>
+    <!-- JavaScript code to handle form submission -->
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the uploaded JSON file
+            const fileInput = document.getElementById("jsonFile");
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please choose a JSON file to upload.");
+                return;
+            }
+
+            // Read the file as text
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const json = event.target.result;
+                console.log(JSON.parse(json).data);
+                // Process the uploaded JSON data
+                // Call your data analysis function here with the 'json' variable as input
+            };
+            reader.readAsText(file);
+        });
+        document.getElementById("jsonFile").addEventListener("change", function (event) {
+            const fileName = event.target.files[0].name;
+            document.getElementById("fileName").textContent = fileName;
+        });
+    </script>
 </body>
 
 </html>
