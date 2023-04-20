@@ -2,9 +2,10 @@ window.onload = function()
 {
     // add the events listeners to the form
     addEventsListeners()
+
+    // choose a function to generate data
     const data = getRandomData();
     // const data = getBenfordData();
-    // const data = getRealData()
 
     const BenfordTable = calculateBenford(data);
     updateData(BenfordTable)

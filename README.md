@@ -19,13 +19,19 @@ Benford's Law is a statistical phenomenon that states that in many real-world da
 
 ## How to Use
 
-1. Open the file "js/benfordtestdata.js".
-2. Change the return of the function "getRealData" to any array of data you want to visualise
-3. Open `index.html` in a web browser.
-4. Enjoy exploring and visualizing Benford's Law phenomenon in your data!
+1. Clone or download the repository.
+2. Open `index.html` in a web browser.
+3. Upload your data in JSON format (You can check the json format on the example data/example.json).
+4. Click the "Analyze" button.
+5. View the results in the HTML table and the Google Charts Combo Chart.
+6. Optionally customize the chart appearance and behavior using the available options.
+7. Enjoy exploring and visualizing Benford's Law phenomenon in your data!
 
-p.s: On the "js/benfordtestdata.js", you can find some functions to generate random data.
-and you can simply uncomment the calls to those functions in the "js/main.js" file.
+If you don't have any data and you just want to explore this project:
+1. Open the file "js/main.js".
+2. Uncomment the function you want to use to generate the data (either getRandomData or getBenfordData), learn more about these functions on "js/benfordtestdata.js"
+3. Open `index.html` in a web browser.
+4. Enjoy exploring!
 
 ## Contributions
 
