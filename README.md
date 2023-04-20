@@ -6,8 +6,9 @@ Benford's Law is a statistical phenomenon that states that in many real-world da
 ## Features
 
 - Benford's Law analysis on input data
-- Display of results in an HTML table with CSS styling
-- Visualization of results in a Google Charts Combo Chart
+- Upload a json file or use built-in functions to generate data
+- Display the results in an HTML table
+- Visualization using Google's Combo Chart
 - Customizable options for chart appearance and behavior
 
 ## Technologies Used
@@ -23,7 +24,7 @@ Benford's Law is a statistical phenomenon that states that in many real-world da
 2. Open `index.html` in a web browser.
 3. Upload your data in JSON format (You can check the json format on the example data/example.json).
 4. Click the "Analyze" button.
-5. View the results in the HTML table and the Google Charts Combo Chart.
+5. View the results in the HTML table and the Google's Combo Chart.
 6. Optionally customize the chart appearance and behavior using the available options.
 7. Enjoy exploring and visualizing Benford's Law phenomenon in your data!
 
