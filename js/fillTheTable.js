@@ -1,10 +1,11 @@
 function fillTheTable(tableData) {
     // Get the table element
-    var table = document.getElementById("tableData");
+    var tbody = document.getElementById("tableBody");
+    tbody.innerHTML = ""; // Set innerHTML to an empty string, in case it was previously filled with data
 
     // Loop through the JSON data and populate the table
     for(var i = 0; i < tableData.length; i++) {
-        var row = table.insertRow(); // Insert a row at the end of the table
+        var row = tbody.insertRow(); // Insert a row at the end of the table
         var cell1 = row.insertCell(0); // Insert a cell for 'n'
         var cell2 = row.insertCell(1); // Insert a cell for 'Data Frequency'
         var cell3 = row.insertCell(2); // Insert a cell for 'Data Frequency Percent'

@@ -47,7 +47,7 @@
                     <th>Difference Frequency Percent</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
                 <!-- table data goes here -->
             </tbody>
         </table>
@@ -61,35 +61,11 @@
     <script src="js/benfordslaw.js"></script>
     <script src="js/drawCharts.js"></script>
     <script src="js/fillTheTable.js"></script>
+    <script src="js/events.js"></script>
     <script src="js/main.js"></script>
     <!-- JavaScript code to handle form submission -->
     <script>
-        document.getElementById("uploadForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission
 
-            // Get the uploaded JSON file
-            const fileInput = document.getElementById("jsonFile");
-            const file = fileInput.files[0];
-
-            if (!file) {
-                alert("Please choose a JSON file to upload.");
-                return;
-            }
-
-            // Read the file as text
-            const reader = new FileReader();
-            reader.onload = function (event) {
-                const json = event.target.result;
-                console.log(JSON.parse(json).data);
-                // Process the uploaded JSON data
-                // Call your data analysis function here with the 'json' variable as input
-            };
-            reader.readAsText(file);
-        });
-        document.getElementById("jsonFile").addEventListener("change", function (event) {
-            const fileName = event.target.files[0].name;
-            document.getElementById("fileName").textContent = fileName;
-        });
     </script>
 </body>
 
