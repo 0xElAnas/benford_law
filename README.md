@@ -25,7 +25,7 @@ Benford's Law is a statistical phenomenon that states that in many real-world da
 4. Enjoy exploring and visualizing Benford's Law phenomenon in your data!
 
 p.s: On the "js/benfordtestdata.js", you can find some functions to generate random data.
-and you can simply uncomment the calls to those functions in the "js/benfordlawpage.js" file.
+and you can simply uncomment the calls to those functions in the "js/main.js" file.
 
 ## Contributions
 
