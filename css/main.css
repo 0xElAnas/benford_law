@@ -1,0 +1,49 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f8f8f8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+.heading {
+    color: #1e1e1e;
+    /* Set the text color */
+    font-size: 48px;
+    /* Set the font size */
+    font-family: "Helvetica", sans-serif;
+    /* Set the font family */
+    text-align: center;
+    /* Set the text alignment */
+    padding: 10px;
+    /* Add some padding around the heading */
+    background-color: #f8f8f8;
+    /* Set the background color */
+}
+
+#charts {
+    display: flex;
+    padding: 20px 0;
+}
+
+#barChart_div,
+#lineChart_div {
+    width: 50%;
+    height: 300px;
+    margin-top: 20px;
+}
